@@ -1,3 +1,4 @@
+return {}
 -- return {
 --   "ojroques/nvim-osc52",
 --   config = function()

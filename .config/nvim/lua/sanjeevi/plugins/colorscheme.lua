@@ -1,9 +1,15 @@
 return {
-  'projekt0n/github-nvim-theme',
-  name = 'github-theme',
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
+  "projekt0n/github-nvim-theme",
+  name = "github-theme",
+  lazy = false,    -- Load during startup
+  priority = 1000, -- Load before all other plugins
   config = function()
-    vim.cmd('colorscheme github_dark')
+    require("github-theme").setup({
+      options = {
+        transparent = true, -- Enable transparent background
+      },
+    })
+    vim.cmd("colorscheme github_dark")
   end,
 }
+
